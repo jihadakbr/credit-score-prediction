@@ -56,7 +56,7 @@ Target Variable Description:
 * Feature selection has been performed using Weight of Evidence (WOE) and Information Value (IV).
 * A machine learning model employing Logistic regression has been utilized, resulting in a mean AUROC of approximately 73.5%, Gini around 47.0%, and AUCPR of approximately 21.8%.
 * If the machine predicts a True Positive (applicant is predicted to default and actually does default), the company stands to save approximately 5,000,000,000 IDR. Conversely, if a False Negative occurs (applicant is predicted not to default, but actually does), the company may lose approximately 20,000,000,000 IDR.
-* The accuracy of these metrics (True Positive/Negative and False Positive/Negative) depends on the quality of the machine learning model mentioned above.
+* The high or low percentages of True Positive/Negative and False Positive/Negative depend on the metrics of the machine learning model mentioned above.
 * The lower metrics can be attributed to the lack of Information Value (IV) between features. Additionally, there are several CSV files, such as 
     * bureau.csv
     * bureau_balance.csv 
