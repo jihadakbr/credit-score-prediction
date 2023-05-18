@@ -65,5 +65,5 @@ Target Variable Description:
     * POS_CASH_balance.csv 
     * previous_application.csv 
 
-that contain features with higher potential IV but couldn't be merged into application_train.csv and application_test.csv. This limitation is due to the current laptop (4GB RAM) experiencing crashes when attempting to merge these files.
+   that contain features with higher potential IV but couldn't be merged into application_train.csv and application_test.csv. This limitation is due to the current laptop (4GB RAM) experiencing crashes when attempting to merge these files.
 * It is hoped that in the future, a more advanced laptop/computer can be acquired to successfully merge these files.
