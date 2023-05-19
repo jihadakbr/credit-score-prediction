@@ -45,7 +45,7 @@ Target Variable Description:
 
 ![scorecard development](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgh9dmvLMyTnrbrhulhCqjd5jm6wVXoKXGNywt47z-4cAiybgJNYTjoEGUdSqZVe-tgvbpXOfUxjzYVtFCul1ShcbEW_NhNmvNFudSV7DX-BSBYgdsaREbOrkxzglExBJcMLEXgCrmd6Pfyp8apIjqp0dCxluWfnM8hve9Npm5Lyzw1dnlLdHT5X3nP/s1600/scorecard-development.png)
 
-![Money Losses and Saved](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6FyzwzRO0ZJdvJJLj9_m1vqiHS4NdsncN2InC2QQ2-KX0RHDZ13IqxLDx-vZJJoGfqF3BnqIj2bcBfPwgopEAY-mBvoYmwxfPzF4ZntGAKy4uHAy8ZNlQoMpyBMKdpE6Ux4ipW2v4XDkuveoKDeIU9aRvXLhcP457u_4UclB6axfEER7PfwPKAX-Y/s1600/money-losses-and-saved.png)
+![Money Losses and Saved](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRuomqTI-ORGJeL1QCCpfMR5yVY0uILPpmmsW7ZMdwaLw4EFfZrJbDMj5UshVhefHjCV6XpARjBDcDhIt3jtjr4UygoXOX1c68eTzzG99hLCJcXmuNOMf6RwsDEn8maQ9vroWv993KEZ3jVt2Ndw0Ja9Gxwp58jA5Lycn5TtLMNIxLsQYTXXX5aok0/s1600/money-losses-and-saved.png)
 ## Conclusions
 
 * The application_train.csv (9,152,465 items) and application_test.csv (1,404,419) contain numerous missing values, which have been addressed by applying the mean technique for numerical variables and the mode technique for categorical variables.
@@ -54,8 +54,8 @@ Target Variable Description:
 * Outliers have been handled by removing their nonsensical values.
 * The target variables consist of 91.3% non-defaulters (accepted) and 8.7% defaulters (rejected).
 * Feature selection has been performed using Weight of Evidence (WOE) and Information Value (IV).
-* A machine learning model employing Logistic regression has been utilized, resulting in a mean AUROC of approximately 73.5%, Gini around 47.0%, and AUCPR of approximately 21.8%.
-* If the machine predicts a True Positive (applicant is predicted to default and actually does default), the company stands to save approximately 5,000,000,000 IDR. Conversely, if a False Negative occurs (applicant is predicted not to default, but actually does), the company may lose approximately 20,000,000,000 IDR.
+* Logistic regression was employed in a machine learning model, yielding the following metrics: threshold ≈ 0.23, accuracy ≈ 0.23, precision ≈ 0.10, recall ≈ 97.0, F1 ≈ 0.18, AUROC ≈ 0.73, Gini ≈ 0.47, and AUCPR ≈ 0.22.
+* Consequently, the company is expected to save around 400,000,000 IDR while incurring a loss of approximately 50,000,000 IDR.
 * The high or low percentages of True Positive/Negative and False Positive/Negative depend on the metrics of the machine learning model mentioned above.
 * The lower metrics can be attributed to the lack of Information Value (IV) between features. Additionally, there are several CSV files, such as 
     * bureau.csv
