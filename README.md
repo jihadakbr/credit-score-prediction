@@ -4,6 +4,7 @@
 Home Credit Indonesia is currently using various statistical methods and Machine Learning to make credit score predictions. Now, we ask you to unlock the maximum potential of our data. By doing so, we can ensure that:
 * Customers who are capable of repayment are not rejected when applying for a loan.
 * Loans can be given with a principal, maturity, and repayment calendar that will motivate customers to succeed.
+
 Evaluation will be done by checking how deep your understanding of the analysis is. Note that you need to use at least Logistic Regression to construct your machine learning models. After that, create a presentation slide containing end-to-end modeling analysis results along with business recommendations (maximum 10 pages).
 
 
