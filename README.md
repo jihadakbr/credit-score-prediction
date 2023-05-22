@@ -24,8 +24,8 @@ Home Credit Indonesia's internal database
 10. sample_submission.csv
 
 Target Variable Description:
-* Target variable = 1 → Rejected for a loan → Defaulter
-* Target variable = 0 → Accepted for a loan → Non-Defaulter
+* Target variable = 0 → Rejected for a loan → Defaulter
+* Target variable = 1 → Accepted for a loan → Non-Defaulter
 ## Tools
 
 * Programming language: Python.
@@ -43,21 +43,20 @@ Target Variable Description:
 
 ## Results
 
-![scorecard development](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgh9dmvLMyTnrbrhulhCqjd5jm6wVXoKXGNywt47z-4cAiybgJNYTjoEGUdSqZVe-tgvbpXOfUxjzYVtFCul1ShcbEW_NhNmvNFudSV7DX-BSBYgdsaREbOrkxzglExBJcMLEXgCrmd6Pfyp8apIjqp0dCxluWfnM8hve9Npm5Lyzw1dnlLdHT5X3nP/s1600/scorecard-development.png)
+![scorecard development](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHB9YwwfhZiD5MaOhmsMkrzamGuQv6XVZt3vz-kd5ERJtHLZoyIGpIRKPfuR0fxkEbFbTc-Ynixia-8ZU-Gzc2pbeCCtHI3NPtbN_KLW2pl9cO1GEzZExwleKe7MNSFFNrIvPo3TbAqfHHf27VVUCdBNaGLWGinq98FsoxYwtR0vqcWA6mkRRiqXdL/s1600/scorecard-development.png)
 
-![Money Losses and Saved](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRuomqTI-ORGJeL1QCCpfMR5yVY0uILPpmmsW7ZMdwaLw4EFfZrJbDMj5UshVhefHjCV6XpARjBDcDhIt3jtjr4UygoXOX1c68eTzzG99hLCJcXmuNOMf6RwsDEn8maQ9vroWv993KEZ3jVt2Ndw0Ja9Gxwp58jA5Lycn5TtLMNIxLsQYTXXX5aok0/s1600/money-losses-and-saved.png)
+![Money Losses and Saved](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIisG2vEjrxyz1yjQ0h7uetpuneW2vJvdpBzDgNuc-vzlgr9KLVnwExDnfr0vNh_ZJs0mEq0ThjaYOgw-lXylETXsyFiVCW-VaxOZv7XYa9a2XFo2Mw-SbsP3rgYlgX9DAUyffLcZWd49lrV_oI6VdgduhEfTntzmsagDmxrCjosMYLacBQw5owjNj/s1600/money-losses-and-saved.png)
 ## Conclusions
 
-* The application_train.csv (9,152,465 items) and application_test.csv (1,404,419) contain numerous missing values, which have been addressed by applying the mean technique for numerical variables and the mode technique for categorical variables.
+* The application_train.csv (307511 rows and 122 columns) and application_test.csv (48744 rows and 121 columns) contain numerous missing values and outliers, which have been handled using the WOE binning technique.
 * No duplicate values are present in the dataset.
 * Additional features, including age, annuity income ratio, and loan duration, have been created.
-* Outliers have been handled by removing their nonsensical values.
-* The target variables consist of 91.3% non-defaulters (accepted) and 8.7% defaulters (rejected).
+* The target variables consist of 91.9% non-defaulters (accepted) and 8.1% defaulters (rejected).
 * Feature selection has been performed using Weight of Evidence (WOE) and Information Value (IV).
-* Logistic regression was employed in a machine learning model, yielding the following metrics: threshold ≈ 0.23, accuracy ≈ 0.23, precision ≈ 0.10, recall ≈ 97.0, F1 ≈ 0.18, AUROC ≈ 0.73, Gini ≈ 0.47, and AUCPR ≈ 0.22.
-* Consequently, the company is expected to save around 400,000,000 IDR while incurring a loss of approximately 50,000,000 IDR.
+* Logistic regression was employed in a machine learning model, yielding the following metrics: threshold ≈ 0.23, accuracy ≈ 0.90, precision ≈ 0.93, recall ≈ 0.96, F1 ≈ 0.94, AUROC ≈ 0.74, Gini ≈ 0.48, and AUCPR ≈ 0.97. These metrics exhibit strong performance in credit risk modeling.
+* Consequently, the company is expected to save around 30,000,000,000 IDR while incurring a loss of approximately 100,000,000 IDR.
 * The high or low percentages of True Positive/Negative and False Positive/Negative depend on the metrics of the machine learning model mentioned above.
-* The lower metrics can be attributed to the lack of Information Value (IV) between features. Additionally, there are several CSV files, such as 
+* Furthermore, we can enhance them further by incorporating features with higher information value (IV). Several CSV files encompassing such features possess significant IV potential, yet I was unable to merge them into the application_train.csv and application_test.csv datasets. These files comprise:
     * bureau.csv
     * bureau_balance.csv 
     * credit_card_balance.csv 
